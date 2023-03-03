@@ -1,0 +1,258 @@
+import sys
+
+print("---DUNGEON GAME---")
+
+print('''Choose your character:\n
+Type:
+1 Barbarian
+2 Wizard
+3 bard
+4 Programmer from the 19th century who was
+   stop in a dimension where there are no
+   computers, only magic and swords''')
+
+print("")
+character = input("What is your character?\n")
+print("")
+
+while(character!="1")and(character!="2")and(character!="3")and(character!="4"):
+   print("Sorry, only characters from the list.\n")
+   print("")
+   character = input("What is your character?\n")
+   print("")
+else:
+   if(character=="1"):
+     print('''Hello barbarian, you are strong, brute, dumb,
+              has a SWORD and a SHIELD''')
+   elif(character=="2"):
+     print('''Hello wizard, you are weak, cultured, intelligent,
+              has a SCETER and a POTION''')
+   elif(character=="3"):
+     print('''Hello bard, you are funny, curious, handsome,
+has a MANDOLIN and a HAT''')
+   else:
+     print('''Hello programmer, you are introverted, weird, very weak, has a NOTEBOOK and a USB CABLE''')
+
+# END CHARACTER CHOICE
+
+print("-"*50)
+print('''The group of adventurers is walking through the forest when the barbarian sees a funny rabbit entering a cave and runs after from him.\n
+The barbarian manages to catch the rabbit and now he doesn't knows whether to eat it or tame it.\n
+(new item: RABBIT)\n
+The cave is very dark and seems to be inhabited by trolls, which can mean treasures.\n
+You are the leader of the group and everyone's life depends on your decisions.\n\n
+Type:
+8 to move forward
+2 to go back
+4 to turn LEFT
+6 to turn RIGHT''')
+
+print("")
+follow = input("Where do you want to go?\n")
+print("")
+
+while(follow!="8")and(follow!="2")and(follow!="4")and(follow!="6"):
+   print("!!!You don't know how to play!!!.\n")
+   print("")
+   follow = input("Where do you want to go?\n")
+   print("")
+else:
+   if(follow=="2"):
+    print("You have exited the cave.\n\n GAME OVER.")
+    sys.exit()
+   elif(follow=="8")or(follow=="4"):
+    while(follow=="8")or(follow=="4"):
+     print("A long dark corridor.\n")
+     print("")
+     follow = input("Where do you want to go?\n")
+     print("")
+    else:
+     print("")
+
+# END OF DIRECTION LOOPING
+print("-"*50)
+print('''You come across a large lake in the center of a gallery.\n
+There's no way to go forward other than going through it.\n
+You hear strange noises behind you.\n\n
+Type it:
+1 to swim across
+2 to dive to the bottom
+3 to go back
+4 to sit and rest''')
+
+print("")
+follow = input("Where do you want to go?\n")
+print("")
+
+while(follow!="1")and(follow!="2")and(follow!="3")and(follow!="4"):
+   print("!!!You don't know how to play!!!.\n")
+   print("")
+   follow = input("Where do you want to go?\n")
+   print("")
+else:
+   if(follow=="1"):
+     if(character=="1")or(character=="3"):
+       print("You crossed the lake and came across trolls!")
+     else:
+       print("You can't swim!\n\n GAME OVER")
+       sys.exit()
+   elif(follow=="2"):
+     if(character=="1")or(character=="3"):
+       print("You found a treasure at the bottom! But your companions drowned.\n\n GAME OVER")
+       sys.exit()
+     else:
+       print("You sank, sank, sank like a stone. You can't swim!\n\n GAME OVER")
+       sys.exit()
+   elif(follow=="3"):
+     print("You found a lot of trolls!")
+   else:
+     print("You sat on a troll!")
+
+#END OF THE LAGO CHOICE
+print("-"*50)
+print('''
+Type:
+1 to fight with a SWORD
+2 to fire BALLS OF FIRE
+3 to play a SONG and calm them down
+4 to turn on the NOTEBOOK''')
+
+print("")
+combat = input("What do you want to do?\n")
+print("")
+
+while(combat!="1")and(combat!="2")and(combat!="3")and(combat!="4"):
+   print("!!!You don't know how to play!!!.\n")
+   print("")
+   combat = input("What do you want to do?\n")
+   print("")
+else:
+   if(combat=="1"):
+     if(character=="1"):
+       print('''You defeated the troll!!!\n
+                You found many treasures!!!\n
+                Hooray for the lucky RABBIT!!!''')
+       sys.exit()
+     elif(character=="4"):
+       print('''You can't even hold a sword!\n
+                A troll nearly killed you, try again!''')
+     else:
+       print('''You don't know how to use a sword!!!\n
+                A troll nearly killed you, try again!''')
+   elif(combat=="2"):
+     if(character=="2"):
+       print('''You defeated the troll!!!\n
+                You found many treasures!!!''')
+       sys.exit()
+     elif(character=="4"):
+       print('''You don't even believe in magic!!!\n
+                A troll nearly killed you, try again!''')
+     else:
+       print('''You don't know how to do magic!\n
+                A troll nearly killed you, try again!''')
+   elif(combat=="3"):
+     if(character=="3"):
+       print('''You defeated the troll!!!\n
+                You found many treasures!!!''')
+       sys.exit()
+     elif(character=="4"):
+       print('''Alanis Morissette? Really?\n
+                A troll nearly killed you, try again!''')
+     else:
+       print('''You don't know any songs!\n
+                A troll nearly killed you, try again!''')
+   elif(combat=="4"):
+     if(character=="4"):
+       print("-"*50)
+       print('''Why did you turn on the notebook???\n
+                What's your problem???\n
+                Get out of there before you get hurt!''')
+       print('''Type:\n
+                1 to use NOTEBOOK as shield
+                2 to use the USB CABLE as a harness
+                3 to hide behind the BARBARIAN
+                4 to hide behind the WIZARD\n''')
+       combat2 = input("What do you choose:")
+       if(combat2=="1"):
+         print("It worked! You have a second chance!")
+       elif(combat2=="2"):
+         print("Really? A troll took your head off.\n\n GAME OVER")
+         sys.exit()
+       elif(combat2=="3"):
+         print("Great idea! You have a second chance!")
+       else:
+         print("Did you really think the wizard would protect you?\n\n GAME OVER")
+         sys.exit()
+     else:
+       print('''You don't know what a notebook is!\n
+                A troll nearly killed you, try again!''')
+
+print("-"*50)
+print('''
+Type:
+1 to fight with a SWORD
+2 to fire BALLS OF FIRE
+3 to play a SONG and calm them down
+4 to throw the NOTEBOOK against the Troll''')
+
+print("")
+combat = input("What do you want to do?\n")
+print("")
+
+while(combat!="1")and(combat!="2")and(combat!="3")and(combat!="4"):
+   print("!!!You don't know how to play!!!.\n")
+   print("")
+   combat = input("What do you want to do?\n")
+   print("")
+else:
+   if(combat=="1"):
+     if(character=="1"):
+       print('''You defeated the troll!!!\n
+                You found many treasures!!!\n
+                Hooray for the lucky RABBIT!!!''')
+       sys.exit()
+     else:
+       print('''Don't you learn? DIED!\n\n GAME OVER''')
+       sys.exit()
+   elif(combat=="2"):
+     if(character=="2"):
+       print('''You defeated the troll!!!\n
+You found many treasures!!!\n\nGAME OVER''')
+       sys.exit()
+     else:
+       print('''Don't you learn? DIED!\n\n GAME OVER''')
+       sys.exit()
+   elif(combat=="3"):
+     if(character=="3"):
+       print('''You defeated the troll!!!\n
+                You found many treasures!!!
+                \n\nGAME END''')
+       sys.exit()
+     else:
+       print('''Don't you learn? DIED! \n\nGAME OVER''')
+       sys.exit()
+   elif(combat=="4"):
+     if(character=="4"):
+       print("-"*50)
+       print('''Did you throw away your gaming NOTEBOOK?\n
+                That was very brave!\n
+                Congratulations, you've unlocked the extras!\n
+                !!!A PORTAL OPENS FROM INSIDE ONE OF THE TROLLS!!!''')
+       print('''Type:\n
+                1 to go through the portal
+                2 to convince your teammates to go through the portal
+                3 not to resist the rabbit's big eyes and take it with you
+                4 to continue in this fantastic universe\n''')
+       combat2 = input("What do you choose:")
+       if(combat2=="1"):
+         print("Your mother calls you for breakfast and you discover that you've been playing all night. \n\nGAME OVER")
+       elif(combat2=="2"):
+         print("You go through the portal and arrive at what looks like a spaceship. In the background you hear someone say:\n -'Mister Spock, we have invaders'.\n\n GAME OVER")
+         sys.exit()
+       elif(combat2=="3"):
+         print("The rabbit was a wizard in disguise who wanted to get to modern Earth. He turned you into a rabbit and he became you.\n\n GAME OVER")
+       else:
+         print("The group has defeated the Trolls and you have found a MAGIC SWORD capable of transforming even a nerd into a mighty knight.\n\n GAME OVER")
+         sys.exit()
+     else:
+       print('''You really don't know how to play! It's over for you!\n\n GAME OVER''')
