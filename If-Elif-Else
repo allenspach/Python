@@ -1,0 +1,14 @@
+sky = input("What color is the sky?")
+
+if(sky=="blue"):
+   print("Take the hat!")
+elif(sky=="gray"):
+   print("Take the umbrella!")
+elif(sky=="dark gray"):
+   print("It's better not to leave the house.")
+elif(sky=="orange"):
+   print("Enjoy the sunset!")
+elif(sky=="purple"):
+   print("What planet do you live on?")
+else:
+   print("Sky is that pile of nothing over your head. Try again.")
